@@ -1,0 +1,26 @@
+
+confguracion de poryecto de node:
+
+npm int -y
+
+instalar nodemon //para refrscar el servidor caundo se hace cambios
+"scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+
+
+npn run dev (modo desarroloo)
+
+condifguracion de express:
+ npm i express
+
+..configurar servdor y la primera rutas
+
+
+CONFIGURAR LAS VARIABLES DE ENTORNO
+
+**crear el archvo de entorno con la extension .env
+** instalar paquete .... npm i dotenv
+
+creacion de rutas para los usuarios
