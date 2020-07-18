@@ -2,10 +2,15 @@ Cómo levantar el proyecto?
 Deberemos ejecutar los siguientes comandos para ejecutar el proyecto.
 
 Instalar paquetes de NPM
-npm install
+
+<strong>npm install</strong>
+
 Levantar el proyecto
-npm run dev
+
+<strong>npm run dev</strong>
+
 Finalmente
-Naver a la siguiente ruta para comenzar a visualizar el API.
+
+Navegar  a la siguiente ruta para comenzar a visualizar el API.
 
 http://localhost:3000/api
