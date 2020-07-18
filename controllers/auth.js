@@ -98,7 +98,7 @@ const loginUser = async(req, res = response) => {
             });
         }
 
-        //generar el toke
+        //GENERAR TOKEN (PAYLOAD GUARADR EL UID, NOMBRE)
 
         const token = await  generarJWT(usuario.id,usuario.name);
 
@@ -130,11 +130,19 @@ const loginUser = async(req, res = response) => {
 
 //renovartokenUser
 
-const renewToken = (req, res = response) => {
+const renewToken = async (req, res = response) => {
+
+    const {uid,name,creado,expiracion}=req;
+
+    //GENERAR TOKEN (PAYLOAD GUARADR EL UID, NOMBRE)
+
+    const token = await  generarJWT(uid,name);
 
     res.json({
         ok: true,
-        msg: 'renew token'
+        name,
+        token
+        
     });
 
 };
