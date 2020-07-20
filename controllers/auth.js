@@ -12,6 +12,30 @@ const {generarJWT}=require('../helpers/jwt')
 //modelo usuaro
 const Usuario = require('../models/Usuario');
 
+const getUser = async (req, res = response) => {
+
+    
+    try {
+        const usuarios = await Usuario.find();
+                                    
+
+    res.json({
+        ok: true,
+        usuarios
+    });
+        
+    } catch (error) {
+
+        console.log(error);
+
+        res.status(500).json({
+            ok: true,
+            msg:'hable con el administrador'
+            
+        });  
+    }
+};
+
 //crearUsuario
 const createUser = async(req, res = response) => {
 
@@ -151,5 +175,6 @@ const renewToken = async (req, res = response) => {
 module.exports = {
     createUser,
     loginUser,
-    renewToken
+    renewToken,
+    getUser
 };

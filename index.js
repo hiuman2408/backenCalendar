@@ -2,10 +2,12 @@ const express = require('express');
 
 //importar el cors
 
-var cors = require('cors');
+
 
 
 require('dotenv').config();///para las varibles de entorno
+
+var cors = require('cors');
 
 const { dbConnection } = require('./database/config');
 //console.log(process.env);

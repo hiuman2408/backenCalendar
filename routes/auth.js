@@ -12,13 +12,16 @@ const { check } = require('express-validator');
 const router = Router(); //eje3cutar la funcion 
 
 //destrucurin de metodo 
-const { createUser, loginUser, renewToken } = require('../controllers/auth'); 
+const { createUser, loginUser, renewToken,getUser } = require('../controllers/auth'); 
 
 //MIDELWARE VALIDARcAMPOS
 const { validarCampos} = require('../middlewares/validar-campos');
 
 //MIDELWARE VALIDARJWT
 const { validarJWT } = require('../middlewares/validar-jwt');
+
+//listado de Usaurios
+router.get('/',getUser);
 
 
 //crear usuarios
