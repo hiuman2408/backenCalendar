@@ -1,5 +1,9 @@
 const express = require('express');
 
+//importar el cors
+
+var cors = require('cors');
+
 
 require('dotenv').config();///para las varibles de entorno
 
@@ -11,6 +15,9 @@ const app = express();
 
 //base de datos mongodb atlas
 dbConnection();
+
+//CORS
+app.use(cors());
 
 //directorio publico
 
@@ -31,6 +38,7 @@ app.use('/api/auth', require('./routes/auth'));
 
 
 //crud: eventos
+app.use('/api/events', require('./routes/events'));
 
 //crud de hospitales
 
